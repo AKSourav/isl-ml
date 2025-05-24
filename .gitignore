@@ -2,3 +2,4 @@ isl_dataset
 *.pkl
 *.pkl
 .venv
+*.onnx
