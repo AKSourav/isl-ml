@@ -94,6 +94,7 @@ while True:
     results_hands = hands.process(image_rgb)
 
     landmarks = extract_landmarks(results_pose, results_hands)
+    max_prob =0
 
     if any(landmarks):
         landmarks = normalize_landmarks(np.array(landmarks))
@@ -111,7 +112,7 @@ while True:
     else:
         word = "No hands/pose detected"
 
-    cv2.putText(frame, f'Prediction: {word}', (10, 30),
+    cv2.putText(frame, f'Prediction: {word} {max_prob*100}', (10, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow('ISL Live Prediction', frame)
 
