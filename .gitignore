@@ -4,3 +4,5 @@ isl_dataset
 .venv
 *.onnx
 .venv1
+isl_dataset_holistic
+*.joblib
